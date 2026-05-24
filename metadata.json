@@ -1,0 +1,6 @@
+{
+  "name": "KampusKreatif AI",
+  "description": "Asisten Kreatif & Social Media Strategist khusus mahasiswa, BEM, HIMA, dan UKM untuk membuat ide konten dan copywriting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
