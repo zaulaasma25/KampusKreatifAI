@@ -258,6 +258,13 @@ export default function KampusKreatifPage() {
         }),
       });
 
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) {
+        const rawText = await response.text();
+        console.error("Received HTML/Plain response:", rawText.slice(0, 300));
+        throw new Error("Server mengembalikan respon non-JSON (HTML/Error). Mohon tunggu beberapa detik lalu tekan tombol kirim kembali.");
+      }
+
       const data = await response.json();
 
       if (!response.ok) {
